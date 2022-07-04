@@ -1,5 +1,5 @@
 {
-  "name": "isprime",
+  "name": "@mia-cx/isprime",
   "version": "0.0.1",
   "author": "mia-cx",
   "description": "yet another isprime package with caching.\ncomputes prime numbers using trial division.",
@@ -18,12 +18,18 @@
     "cache",
     "trial division"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
     "test": "jest",
+    "build": "tsc",
+    "format": "prettier \"src/**/*.ts\" --write",
     "lint": "eslint -c .eslintrc.json",
-    "format": "prettier \"src/**/*.ts\" --write"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "license": "ISC",
   "devDependencies": {
