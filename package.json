@@ -1,0 +1,46 @@
+{
+  "name": "isprime",
+  "version": "0.0.1",
+  "author": "mia-cx",
+  "description": "yet another isprime package with caching.\ncomputes prime numbers using trial division.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mia-cx/isprime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mia-cx/isprime/issues"
+  },
+  "homepage": "https://github.com/mia-cx/isprime#readme",
+  "keywords": [
+    "isprime",
+    "is prime",
+    "is-prime",
+    "cache",
+    "trial division"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint -c .eslintrc.json"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.4",
+    "@typescript-eslint/parser": "^5.30.4",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "jest": "^28.1.2",
+    "ts-jest": "^28.0.5",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
