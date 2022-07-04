@@ -35,7 +35,7 @@ test("clear cache", () => {
   expect(cache.size).toBe(0);
 });
 
-const testAmount: number = 10000000;
+const testAmount: number = 100000;
 
 test(`test prime for integers under ${testAmount}`, () => {
   let i = testAmount;
