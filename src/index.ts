@@ -8,7 +8,8 @@
 
 // export const pool = workerpool.pool(__dirname + "worker.ts");
 
-export const WHEEL_PRIMES = import("./wheel.json");
+import wheel from "./wheel.json";
+export const WHEEL_PRIMES = wheel;
 
 export const cache: Map<number, boolean> = new Map();
 
