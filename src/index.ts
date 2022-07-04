@@ -1,3 +1,6 @@
+import wheel from "./wheel.json";
+export const WHEEL_PRIMES = wheel;
+
 // TODO workers
 // import workerpool from "workerpool";
 // import worker from "./worker";
@@ -7,9 +10,6 @@
 // });
 
 // export const pool = workerpool.pool(__dirname + "worker.ts");
-
-import wheel from "./wheel.json";
-export const WHEEL_PRIMES = wheel;
 
 export const cache: Map<number, boolean> = new Map();
 
