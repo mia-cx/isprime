@@ -1,6 +1,6 @@
 import isPrime, { cache } from "../index";
 
-const testValue = 101;
+const testValue = 45413;
 
 test("initial cache empty.", () => {
   expect(cache.size).toBe(0);
@@ -35,7 +35,7 @@ test("clear cache", () => {
   expect(cache.size).toBe(0);
 });
 
-const testAmount: number = 1000000;
+const testAmount: number = 10000000;
 
 test(`test prime for integers under ${testAmount}`, () => {
   let i = testAmount;
@@ -46,8 +46,8 @@ test(`test prime for integers under ${testAmount}`, () => {
   }
 });
 
-test(`cache size should be ${(testAmount >> 1) - 2}`, () => {
-  expect(cache.size).toBe((testAmount >> 1) - 2);
+test(`cache size should be ${(testAmount >> 1) - 47}`, () => {
+  expect(cache.size).toBe((testAmount >> 1) - 47);
 });
 
 test(`test prime for integers under ${testAmount} (cached).`, () => {
