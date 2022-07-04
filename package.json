@@ -23,7 +23,7 @@
     "build": "tsc",
     "test": "jest",
     "lint": "eslint -c .eslintrc.json",
-    "format": "prettier \"src/**/*.ts\" "
+    "format": "prettier \"src/**/*.ts\" --write"
   },
   "license": "ISC",
   "devDependencies": {
