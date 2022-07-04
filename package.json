@@ -1,6 +1,6 @@
 {
   "name": "@mia-cx/isprime",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "mia-cx",
   "description": "yet another isprime package with caching.\ncomputes prime numbers using trial division.",
   "repository": {
