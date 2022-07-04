@@ -12,23 +12,24 @@ export const cache: Map<number, boolean> = new Map();
 
 /**
  * checks whether a number is a prime number, using trial division
- * @param {number} n number to check whether it is a prime number
- * @returns {boolean} true if n is a prime number, false otherwise
+ * @param n number to check
+ * @param options options for optimization (and multithreading when added)
+ * @returns true if n is a prime number
  */
 export default function isPrime(
   n: number,
-  options: { useWorkers: boolean } = { useWorkers: false }
+  options: { /* useWorkers: boolean;*/ useCache: boolean } = {
+    /*useWorkers: false,*/
+    useCache: true,
+  }
 ): boolean {
   switch (n) {
     case 1:
-      // console.debug("1 is not prime");
       return false;
     case 2 | 3:
-      // console.debug("2 & 3 are prime");
       return true;
     default:
       if (n % 2 === 0) {
-        // console.debug(`${n} is even, not prime`);
         return false;
       }
       if (cache.has(n)) {
@@ -41,14 +42,14 @@ export default function isPrime(
 
       let i = 5;
 
-      if (options.useWorkers) {
-        // TODO workers
-      } else {
-        while (prime && i <= SQUARE_ROOT) {
-          if (isDivisible(n, i)) prime = false;
-          i++;
-        }
+      // if (options.useWorkers) {
+      //   // TODO workers
+      // } else {
+      while (prime && i <= SQUARE_ROOT) {
+        if (isDivisible(n, i)) prime = false;
+        i++;
       }
+      // }
 
       cache.set(n, prime);
       // console.log(`${n} is ${!prime ? "not" : ""} prime`);
@@ -56,7 +57,13 @@ export default function isPrime(
   }
 }
 
-export function isDivisible(n: number, o: number) {
+/**
+ * checks whether a number is divisible by another number
+ * @param n number to check
+ * @param o number to check against
+ * @returns true, if n is divisible by o
+ */
+export function isDivisible(n: number, o: number): boolean {
   let divisible = false;
   if (n % o === 0) {
     // console.debug(`${n} is divisible by ${i}, not prime`);
