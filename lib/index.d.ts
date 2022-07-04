@@ -1,10 +1,17 @@
 export declare const cache: Map<number, boolean>;
 /**
  * checks whether a number is a prime number, using trial division
- * @param {number} n number to check whether it is a prime number
- * @returns {boolean} true if n is a prime number, false otherwise
+ * @param n number to check
+ * @param options options for optimization (and multithreading when added)
+ * @returns true if n is a prime number
  */
 export default function isPrime(n: number, options?: {
-    useWorkers: boolean;
+    useCache: boolean;
 }): boolean;
+/**
+ * checks whether a number is divisible by another number
+ * @param n number to check
+ * @param o number to check against
+ * @returns true, if n is divisible by o
+ */
 export declare function isDivisible(n: number, o: number): boolean;
