@@ -11,6 +11,7 @@ specifiers:
   eslint-plugin-n: ^15.0.0
   eslint-plugin-promise: ^6.0.0
   jest: ^28.1.2
+  prettier: ^2.7.1
   ts-jest: ^28.0.5
   ts-node: ^10.8.2
   typescript: ^4.7.4
@@ -26,6 +27,7 @@ devDependencies:
   eslint-plugin-n: 15.2.4_eslint@8.19.0
   eslint-plugin-promise: 6.0.0_eslint@8.19.0
   jest: 28.1.2_hxaxlvfys2pc3hefxwkmyo5cpq
+  prettier: 2.7.1
   ts-jest: 28.0.5_lt5llx2ti6zt4eclhanfli5ynu
   ts-node: 10.8.2_qqrtuuv3y2pz7xoxv47yka6pmi
   typescript: 4.7.4
@@ -2951,6 +2953,12 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pretty-format/28.1.1:
