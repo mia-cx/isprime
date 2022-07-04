@@ -1,3 +1,5 @@
+import WHEEL_PRIMES from "./wheel.json";
+export { WHEEL_PRIMES };
 export declare const cache: Map<number, boolean>;
 /**
  * checks whether a number is a prime number, using trial division
