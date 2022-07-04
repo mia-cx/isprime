@@ -46,6 +46,21 @@ export default function isPrime(
     return true; // primes: 5, 7
   }
 
+  // check whether the number is evenly divisible by `3`
+  if (n % 3 === 0) {
+    return false;
+  }
+
+  // check whether the number is evenly divisible by `5`
+  if (n % 5 === 0) {
+    return false;
+  }
+
+  // check whether the number is evenly divisible by `7`
+  if (n % 7 === 0) {
+    return false;
+  }
+
   // check whether the number is a prime number in the wheel
   if (WHEEL_PRIMES[`${n}` as keyof typeof WHEEL_PRIMES]) {
     return true;
